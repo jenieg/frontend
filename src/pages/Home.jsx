@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import styles from '../styles/styles.module.scss';
 
 const Home = () => {
 
@@ -19,7 +20,7 @@ const Home = () => {
             <div>
                 <h1>Posts</h1>
 
-                <ul>
+                <ul className={styles.postList}>
                     {posts && posts.map(post => (
                         <PostHead key={post._id} post={post} />
                     ))}
