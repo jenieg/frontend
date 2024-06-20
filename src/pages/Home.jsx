@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import PostHead from "../components/PostHead";
 import styles from '../styles/styles.module.scss';
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
     
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await fetch('http://localhost:4000/api/posts');
+            const response = await fetch('http://localhost:4040/api/posts');
             const json = await response.json();
             if (response.ok) setPosts(json);
         }
