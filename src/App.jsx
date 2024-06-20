@@ -4,7 +4,7 @@ import Layout from "./pages/Layout";
 
 const App = () => {
     const elements = useRoutes([
-        // if mainroute display Layout
+        // if root route -> display Layout
         { path: '/', element: <Layout />}
     ]);
 
